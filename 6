@@ -1,0 +1,39 @@
+#include <iostream> 
+
+int main()
+{
+	_int64 sum = 0, maxch = 0, tmp;
+
+	int n;
+
+	std::cin >> n;
+
+	for (int i = 0; i < n; i++) {
+
+		std::cin >> tmp;
+
+		if (tmp < 0) {
+
+			std::cout << "NO";
+
+			return 0;
+
+		}
+
+		sum += tmp;
+
+		maxch = std::max(maxch, tmp);
+
+	}
+
+	if (maxch > sum - maxch) {
+
+		std::cout << "NO";
+
+	}
+
+	else if (sum % 2 == 0)
+
+		std::cout << "YES";
+
+}
