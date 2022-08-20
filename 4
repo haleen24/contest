@@ -1,0 +1,15 @@
+a = 0
+
+for i in range(256):
+
+    n = bin(i)[2::]
+
+    while( len(n) < 8 ):
+
+        n = '0' + n
+
+    if ((not(n[:2] == "11")) or (n[-1] == '0')) == False:
+
+        a += 1
+
+print(a)
